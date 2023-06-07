@@ -10,3 +10,9 @@ C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csp
 C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
 C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb

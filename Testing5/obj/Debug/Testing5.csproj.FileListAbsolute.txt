@@ -12,3 +12,17 @@ C:\Users\prisc\OneDrive\Desktop\Skeleton\Testing5\obj\Debug\Testing5.csproj.Core
 C:\Users\prisc\OneDrive\Desktop\Skeleton\Testing5\obj\Debug\Testing5.csproj.CopyComplete
 C:\Users\prisc\OneDrive\Desktop\Skeleton\Testing5\obj\Debug\Testing5.dll
 C:\Users\prisc\OneDrive\Desktop\Skeleton\Testing5\obj\Debug\Testing5.pdb
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Testing5.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Testing5.pdb
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\obj\Debug\Testing5.csproj.AssemblyReference.cache
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\obj\Debug\Testing5.csproj.CoreCompileInputs.cache
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\obj\Debug\Testing5.csproj.CopyComplete
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\obj\Debug\Testing5.dll
+C:\Users\prisc\Source\Repos\ItsPriscillia\Skeleton\Testing5\obj\Debug\Testing5.pdb
