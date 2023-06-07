@@ -16,7 +16,7 @@ public partial class _1Viewer : System.Web.UI.Page
         Response.Write(AnCustomer.Lastname);
         Response.Write(AnCustomer.Email);
         Response.Write(AnCustomer.Postcode);
-        //Response.Write(AnCustomer.DateAdded);
+        Response.Write(AnCustomer.DateAdded);
         Response.Write(AnCustomer.Active);
 
     }

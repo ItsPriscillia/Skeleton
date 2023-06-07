@@ -98,7 +98,7 @@ namespace Testing1
         }
 
         [TestMethod]
-        public void TestCustomerNoFound()
+        public void TestCustomerIDFound()
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
@@ -111,5 +111,90 @@ namespace Testing1
             }
             Assert.IsTrue(OK);
         }
+        [TestMethod]
+        public void TestFirstnameFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 Firstname = 21;
+            Found = AnCustomer.Find(Firstname);
+            if (AnCustomer.Firstname != "Alice")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestLastnameFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 Lastname = 21;
+            Found = AnCustomer.Find(Lastname);
+            if (AnCustomer.Lastname!= "Smith")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestEmailFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 Email = 21;
+            Found = AnCustomer.Find(Email);
+            if (AnCustomer.Email != "Alice001@gmail.com")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestPostcodeFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 Postcode = 21;
+            Found = AnCustomer.Find(Postcode);
+            if (AnCustomer.Postcode != "LE1 3EE")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 DateAdded = 21;
+            Found = AnCustomer.Find(DateAdded);
+            if (AnCustomer.DateAdded != Convert.ToDateTime("16/02/2002"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestActiveFound()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 Active = 21;
+            Found = AnCustomer.Find(Active);
+            if (AnCustomer.Active != true)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
     }
 }
+    
