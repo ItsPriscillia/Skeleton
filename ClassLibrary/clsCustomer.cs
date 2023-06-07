@@ -92,11 +92,24 @@ namespace ClassLibrary
 
         public bool Find(int customerID)
         {
-            mCustomerID = 21;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@CustomerID", CustomerID);
+            DB.Execute("sproc_tblCustomer_FilterByCustomerID");
+                if (DB.Count==1)
+            {
 
-            mDateAdded = Convert.ToDateTime("16/04/2002");
-            mActive = true;
+            mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+            mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
+            mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
+            mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
+            mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
+            mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+            mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Firstname"]);
             return true;
+        }
+        else
+        {
+        return false;
         }
     }
 }
