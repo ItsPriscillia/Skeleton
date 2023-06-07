@@ -1,0 +1,12 @@
+D:\Skeleton\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Skeleton\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Skeleton\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\prisc\OneDrive\Desktop\Skeleton\ClassLibrary\obj\Debug\ClassLibrary.pdb
