@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using ClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -197,4 +197,5 @@ namespace Testing1
         }
     }
 }
+    
     
