@@ -147,7 +147,7 @@ namespace Testing1
             Boolean OK = true;
             Int32 Email = 21;
             Found = AnCustomer.Find(Email);
-            if (AnCustomer.Email != "Alice001@gmail.com")
+            if (AnCustomer.Email != "Alice001@yahoo.com")
             {
                 OK = false;
             }
@@ -161,7 +161,7 @@ namespace Testing1
             Boolean OK = true;
             Int32 Postcode = 21;
             Found = AnCustomer.Find(Postcode);
-            if (AnCustomer.Postcode != "LE1 3EE")
+            if (AnCustomer.Postcode != "LE2 7QQ")
             {
                 OK = false;
             }
@@ -175,7 +175,7 @@ namespace Testing1
             Boolean OK = true;
             Int32 DateAdded = 21;
             Found = AnCustomer.Find(DateAdded);
-            if (AnCustomer.DateAdded != Convert.ToDateTime("16/02/2002"))
+            if (AnCustomer.DateAdded != Convert.ToDateTime("01/04/2000"))
             {
                 OK = false;
             }

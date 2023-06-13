@@ -101,6 +101,12 @@
             left: 82px;
             z-index: 1;
         }
+        .auto-style17 {
+            position: absolute;
+            top: 6px;
+            left: 374px;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -126,6 +132,7 @@
         </p>
         <asp:Button ID="btnOK" runat="server" CssClass="auto-style15" OnClick="btnOK_Click" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" CssClass="auto-style16" Text="Cancel" />
+        <asp:Button ID="btnFind" runat="server" CssClass="auto-style17" OnClick="btnFind_Click" Text="Find" />
     </form>
 </body>
 </html>
