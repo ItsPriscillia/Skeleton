@@ -11,6 +11,7 @@ namespace ClassLibrary
         private string mPostcode;
         private string mEmail;
         private DateTime mDateAdded;
+        private String mDOB;
         public bool Active
         {
             get
@@ -88,8 +89,17 @@ namespace ClassLibrary
                 mPostcode = value;
             }
         }
-        public string DOB { get; set; }
-
+        public string DOB
+        {
+            get
+            {
+                return mDOB;
+            }
+            set
+            {
+                mDOB = value;
+            }
+        }
         public bool Find(int customerID)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -111,6 +121,11 @@ namespace ClassLibrary
             {
                 return false;
             }
+        }
+
+        public string Valid(string firstname, string lastname, string email, string postcode, string dateAdded, string dOB)
+        {
+            return"";
         }
     }
 }

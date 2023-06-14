@@ -7,6 +7,14 @@ namespace Testing1
     [TestClass]
     public class tstCustomer
     {
+        //good test data
+        string Firstname = "Alice";
+        String Lastname = "Smith";
+        String Email = "Alice001@yahoo.com";
+        String Postcode = "NN1 2EE";
+        String DateAdded = DateTime.Now.Date.ToString();
+        String DOB =   "01/04/2000";
+        
         [TestMethod]
         public void InstanceOK()
         {
@@ -195,6 +203,15 @@ namespace Testing1
             }
             Assert.IsTrue(OK);
         }
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsCustomer AnCustomer = new clsCustomer();
+            String Error = "";
+            Error = AnCustomer.Valid(Firstname, Lastname, Email, Postcode, DateAdded, DOB);
+            Assert.AreEqual(Error, "");
+                }
+
     }
 }
     
