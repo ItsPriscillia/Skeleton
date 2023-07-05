@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace ClassLibrary
 {
@@ -10,8 +13,7 @@ namespace ClassLibrary
         private string mLastname;
         private string mPostcode;
         private string mEmail;
-        private DateTime mDateAdded;
-        private String mDOB;
+        private DateTime mDOB;
         public bool Active
         {
             get
@@ -23,15 +25,15 @@ namespace ClassLibrary
                 mActive = value;
             }
         }
-        public DateTime DateAdded
+        public DateTime DOB
         {
             get
             {
-                return mDateAdded;
+                return mDOB;
             }
             set
             {
-                mDateAdded = value;
+                mDOB = value;
             }
         }
         public Int32 CustomerID
@@ -89,17 +91,9 @@ namespace ClassLibrary
                 mPostcode = value;
             }
         }
-        public string DOB
-        {
-            get
-            {
-                return mDOB;
-            }
-            set
-            {
-                mDOB = value;
-            }
-        }
+
+     
+
         public bool Find(int customerID)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -113,7 +107,7 @@ namespace ClassLibrary
                 mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
-                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mDOB = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
                 mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Firstname"]);
                 return true;
             }

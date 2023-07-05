@@ -36,8 +36,8 @@ namespace Testing1
         {
             clsCustomer AnCustomer = new clsCustomer();
             DateTime TestData = DateTime.Now.Date;
-            AnCustomer.DateAdded = TestData;
-            Assert.AreEqual(AnCustomer.DateAdded, TestData);
+            AnCustomer.DOB = TestData;
+            Assert.AreEqual(AnCustomer.DOB, TestData);
         }
 
         [TestMethod]
@@ -89,7 +89,7 @@ namespace Testing1
         public void DOBPropertyOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            string TestData = "12/04/2002";
+            DateTime TestData = new DateTime (12/04/2002);
             AnCustomer.DOB = TestData;
             Assert.AreEqual(AnCustomer.DOB, TestData);
         }
@@ -125,7 +125,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Firstname = 21;
+            Int32 Firstname = 15;
             Found = AnCustomer.Find(Firstname);
             if (AnCustomer.Firstname != "Alice")
             {
@@ -139,7 +139,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Lastname = 21;
+            Int32 Lastname = 25;
             Found = AnCustomer.Find(Lastname);
             if (AnCustomer.Lastname!= "Smith")
             {
@@ -153,7 +153,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Email = 21;
+            Int32 Email = 30;
             Found = AnCustomer.Find(Email);
             if (AnCustomer.Email != "Alice001@yahoo.com")
             {
@@ -167,7 +167,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Postcode = 21;
+            Int32 Postcode = 6;
             Found = AnCustomer.Find(Postcode);
             if (AnCustomer.Postcode != "LE2 7QQ")
             {
@@ -181,9 +181,9 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 DateAdded = 21;
+            Int32 DateAdded = 9;
             Found = AnCustomer.Find(DateAdded);
-            if (AnCustomer.DateAdded != Convert.ToDateTime("01/04/2000"))
+            if (AnCustomer.DOB != Convert.ToDateTime("01/04/2000"))
             {
                 OK = false;
             }
@@ -195,7 +195,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Active = 21;
+            Int32 Active = 5;
             Found = AnCustomer.Find(Active);
             if (AnCustomer.Active != true)
             {

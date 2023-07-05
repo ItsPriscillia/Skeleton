@@ -128,7 +128,7 @@
             <asp:TextBox ID="txtEmail" runat="server" CssClass="auto-style12" height="29px" width="188px"></asp:TextBox>
             <asp:TextBox ID="txtFirstname" runat="server" CssClass="auto-style10" height="29px" width="188px"></asp:TextBox>
             <asp:TextBox ID="txtPostcode" runat="server" CssClass="auto-style13" height="29px" width="188px"></asp:TextBox>
-            <asp:TextBox ID="txtDateAdded" runat="server" CssClass="auto-style14" height="29px" width="188px"></asp:TextBox>
+            <asp:TextBox ID="txtDOB" runat="server" CssClass="auto-style14" height="29px" width="188px"></asp:TextBox>
         </p>
         <asp:Button ID="btnOK" runat="server" CssClass="auto-style15" OnClick="btnOK_Click" Text="OK" />
         <asp:Button ID="btnCancel" runat="server" CssClass="auto-style16" Text="Cancel" />

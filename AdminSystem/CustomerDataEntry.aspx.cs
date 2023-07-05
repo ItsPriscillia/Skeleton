@@ -20,7 +20,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
         AnCustomer.Lastname = txtLastname.Text;
         AnCustomer.Email = txtEmail.Text;
         AnCustomer.Postcode = txtPostcode.Text;
-        AnCustomer.DateAdded = Convert.ToDateTime(txtDateAdded.Text);
+        AnCustomer.DOB = Convert.ToDateTime(txtDOB.Text);
         AnCustomer.Active = chkActive.Checked;
         Session["AnCustomer"] = AnCustomer;
         Response.Redirect("CustomerViewer.aspx");
@@ -42,7 +42,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtLastname.Text = AnCustomer.Lastname;
             txtEmail.Text = AnCustomer.Email;
             txtPostcode.Text = AnCustomer.Postcode;
-            txtDateAdded.Text = AnCustomer.DateAdded.ToString();
+            txtDOB.Text = AnCustomer.DOB.ToString();
             chkActive.Checked = AnCustomer.Active;
         }
     }
