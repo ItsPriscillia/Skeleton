@@ -44,7 +44,7 @@ namespace Testing1
         public void CustomerIDOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            int TestData = 1;
+            int TestData = 3;
             AnCustomer.CustomerID = TestData;
             Assert.AreEqual(AnCustomer.CustomerID, TestData);
         }
@@ -71,7 +71,7 @@ namespace Testing1
         public void EmailPropertyOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            string TestData = "Alice001@gmail.com";
+            string TestData = "Alice001@yahoo.com";
             AnCustomer.Email = TestData;
             Assert.AreEqual(AnCustomer.Email, TestData);
         }
@@ -80,7 +80,7 @@ namespace Testing1
         public void PostcodePropertyOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            string TestData = "LE1 3EE";
+            string TestData = "NN1 2EE";
             AnCustomer.Postcode = TestData;
             Assert.AreEqual(AnCustomer.Postcode, TestData);
         }
@@ -100,7 +100,7 @@ namespace Testing1
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
-            Int32 CustomerID = 1;
+            Int32 CustomerID = 3;
             Found = AnCustomer.Find(CustomerID);
             Assert.IsTrue(Found);
         }
