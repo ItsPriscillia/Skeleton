@@ -94,7 +94,7 @@ namespace ClassLibrary
 
      
 
-        public bool Find(int customerID)
+        public bool Find(int CustomerID)
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@CustomerID", CustomerID);
@@ -108,16 +108,18 @@ namespace ClassLibrary
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
                 mDOB = Convert.ToDateTime(DB.DataTable.Rows[0]["D0B"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Firstname"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 return true;
             }
             else
             {
                 return false;
             }
+
+
         }
 
-        public string Valid(string firstname, string lastname, string email, string postcode, string dateAdded, string dOB)
+        public string Valid(string firstname, string lastname, string email, string postcode, string dOB)
         {
             return"";
         }

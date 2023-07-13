@@ -8,12 +8,12 @@ namespace Testing1
     public class tstCustomer
     {
         //good test data
-        string Firstname = "Alice";
-        String Lastname = "Smith";
-        String Email = "Alice001@yahoo.com";
-        String Postcode = "NN1 2EE";
-        String DateAdded = DateTime.Now.Date.ToString();
-        String DOB =   "01/04/2000";
+        string Firstname = "Ruth";
+        String Lastname = "Ezee";
+        String Email = "Ezze@gmail.cpm";
+        String Postcode = "SE2 Gn66";
+        String DOB = DateTime.Now.Date.ToString("01/07/2002");
+        
         
         [TestMethod]
         public void InstanceOK()
@@ -44,7 +44,7 @@ namespace Testing1
         public void CustomerIDOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            int TestData = 3;
+            int TestData = 2;
             AnCustomer.CustomerID = TestData;
             Assert.AreEqual(AnCustomer.CustomerID, TestData);
         }
@@ -94,7 +94,6 @@ namespace Testing1
             Assert.AreEqual(AnCustomer.DOB, TestData);
         }
         [TestMethod]
-
         public void FindMethodOK()
 
         {
@@ -111,9 +110,9 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 CustomerID = 3;
+            Int32 CustomerID = 10;
             Found = AnCustomer.Find(CustomerID);
-            if (AnCustomer.CustomerID != 3)
+            if (AnCustomer.CustomerID != 10)
             {
                 OK = false;
             }
@@ -125,9 +124,9 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Firstname = 4;
+            Int32 Firstname = 10;
             Found = AnCustomer.Find(Firstname);
-            if (AnCustomer.Firstname != " Test Firstname")
+            if (AnCustomer.Firstname != " Ruth")
             {
                 OK = false;
             }
@@ -139,9 +138,9 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Lastname = 4;
+            Int32 Lastname = 10;
             Found = AnCustomer.Find(Lastname);
-            if (AnCustomer.Lastname!= "Test Lastname")
+            if (AnCustomer.Lastname != "Ezze")
             {
                 OK = false;
             }
@@ -153,9 +152,9 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Email = 4;
+            Int32 Email = 10;
             Found = AnCustomer.Find(Email);
-            if (AnCustomer.Email != "Test Email")
+            if (AnCustomer.Email != "Ezze@gmail.com")
             {
                 OK = false;
             }
@@ -167,23 +166,23 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Postcode = 9;
+            Int32 Postcode = 10;
             Found = AnCustomer.Find(Postcode);
-            if (AnCustomer.Postcode != "Test Postcode")
+            if (AnCustomer.Postcode != "SE2 Gn66")
             {
                 OK = false;
             }
             Assert.IsTrue(OK);
         }
         [TestMethod]
-        public void TestDateAddedFound()
+        public void TestDOBFound()
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 DateAdded = 4;
-            Found = AnCustomer.Find(DateAdded);
-            if (AnCustomer.DOB != Convert.ToDateTime("01/04/2000"))
+            Int32 DOB = 10;
+            Found = AnCustomer.Find(DOB);
+            if (AnCustomer.DOB != Convert.ToDateTime("01/07/2002"))
             {
                 OK = false;
             }
@@ -195,7 +194,7 @@ namespace Testing1
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            Int32 Active = 4;
+            Int32 Active = 10;
             Found = AnCustomer.Find(Active);
             if (AnCustomer.Active != true)
             {
@@ -208,7 +207,7 @@ namespace Testing1
         {
             clsCustomer AnCustomer = new clsCustomer();
             String Error = "";
-            Error = AnCustomer.Valid(Firstname, Lastname, Email, Postcode, DateAdded, DOB);
+            Error = AnCustomer.Valid(Firstname, Lastname, Email, Postcode, DOB);
             Assert.AreEqual(Error, "");
                 }
 
