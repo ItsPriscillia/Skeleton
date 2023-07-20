@@ -92,8 +92,6 @@ namespace ClassLibrary
             }
         }
 
-     
-
         public bool Find(int CustomerID)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -107,7 +105,12 @@ namespace ClassLibrary
                 mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
                 mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
                 mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
-                mDOB = Convert.ToDateTime(DB.DataTable.Rows[0]["D0B"]);
+                mDOB
+                    
+                    
+                    
+                    
+                    = Convert.ToDateTime(DB.DataTable.Rows[0]["D0B"]);
                 mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
                 return true;
             }

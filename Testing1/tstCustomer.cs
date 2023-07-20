@@ -13,8 +13,8 @@ namespace Testing1
         String Email = "Ezze@gmail.cpm";
         String Postcode = "SE2 Gn66";
         String DOB = DateTime.Now.Date.ToString("01/07/2002");
-        
-        
+
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -89,23 +89,22 @@ namespace Testing1
         public void DOBPropertyOK()
         {
             clsCustomer AnCustomer = new clsCustomer();
-            DateTime TestData = new DateTime (12/04/2002);
+            DateTime TestData = new DateTime(12 / 04 / 2002);
             AnCustomer.DOB = TestData;
             Assert.AreEqual(AnCustomer.DOB, TestData);
         }
         [TestMethod]
         public void FindMethodOK()
-
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
-            Int32 CustomerID = 2;
+            Int32 CustomerID = 10;
             Found = AnCustomer.Find(CustomerID);
             Assert.IsTrue(Found);
         }
-
+    
         [TestMethod]
-        public void TestCustomerIDFound()
+        public void TestCustomerIDNotFound()
         {
             clsCustomer AnCustomer = new clsCustomer();
             Boolean Found = false;
