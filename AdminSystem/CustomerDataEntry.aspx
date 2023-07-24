@@ -28,6 +28,7 @@
             top: 61px;
             left: 14px;
             z-index: 1;
+            http: //localhost:50298/CustomerDataEntry.aspx
         }
         .auto-style5 {
             position: absolute;

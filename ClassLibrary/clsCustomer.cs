@@ -7,13 +7,7 @@ namespace ClassLibrary
 {
     public class clsCustomer
     {
-        private Int32 mCustomerID;
         private Boolean mActive;
-        private string mFirstname;
-        private string mLastname;
-        private string mPostcode;
-        private string mEmail;
-        private DateTime mDOB;
         public bool Active
         {
             get
@@ -25,6 +19,7 @@ namespace ClassLibrary
                 mActive = value;
             }
         }
+        private DateTime mDOB;
         public DateTime DOB
         {
             get
@@ -36,6 +31,7 @@ namespace ClassLibrary
                 mDOB = value;
             }
         }
+        private Int32 mCustomerID;
         public Int32 CustomerID
         {
             get
@@ -47,6 +43,7 @@ namespace ClassLibrary
                 mCustomerID = value;
             }
         }
+        private string mFirstname;
         public string Firstname
         {
             get
@@ -58,6 +55,7 @@ namespace ClassLibrary
                 mFirstname = value;
             }
         }
+        private string mLastname;
         public string Lastname
         {
             get
@@ -69,6 +67,7 @@ namespace ClassLibrary
                 mLastname = value;
             }
         }
+        private string mEmail;
         public string Email
         {
             get
@@ -80,6 +79,7 @@ namespace ClassLibrary
                 mEmail = value;
             }
         }
+        private string mPostcode;
         public string Postcode
         {
             get
@@ -92,6 +92,7 @@ namespace ClassLibrary
             }
         }
 
+
         public bool Find(int CustomerID)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -99,34 +100,26 @@ namespace ClassLibrary
             DB.Execute("sproc_tblCustomer_FilterByCustomerID");
             if (DB.Count == 1)
             {
-
                 mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
-                mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
-                mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
-                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
-                mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
-                mDOB
-                    
-                    
-                    
-                    
-                    = Convert.ToDateTime(DB.DataTable.Rows[0]["D0B"]);
-                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
-                return true;
+            mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
+            mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
+            mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
+            mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
+            mDOB = Convert.ToDateTime(DB.DataTable.Rows[0]["DOB"]);
+            mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+            return true;
             }
             else
             {
                 return false;
             }
-
-
         }
+
 
         public string Valid(string firstname, string lastname, string email, string postcode, string dOB)
         {
             return"";
         }
 
-     
     }
 }
