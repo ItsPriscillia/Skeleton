@@ -116,9 +116,60 @@ namespace ClassLibrary
         }
 
 
-        public string Valid(string firstname, string lastname, string email, string postcode, string dOB)
+        public string Valid(string Firstname, string Lastname, string Email, string Postcode, string DOB)
         {
-            return"";
+            String Error = "";
+            DateTime DateTemp;
+            if(Firstname.Length==0)
+            {
+                Error = Error + "The firstname may not be blank : ";
+            }
+            if (Firstname.Length > 50)
+            {
+                Error = Error + "The firstname must be less than 50 characters : ";
+            }
+            try
+            {
+                DateTemp = Convert.ToDateTime(DOB);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                Error = Error + "The date was not a valid date : ";
+            }
+            if (Postcode.Length == 0)
+            {
+                Error = Error + "The post code may not be blank : ";
+            }
+            if (Postcode.Length > 9)
+            {
+                Error = Error + "The post code must be less than 9 characters : ";
+            }
+            if (Email.Length == 0)
+            {
+                Error = Error + "The street may not be blank : ";
+            }
+            if (Email.Length > 25)
+            {
+                Error = Error + "The street must be less than 25 characters : ";
+            }
+            if (Lastname.Length == 0)
+            {
+                Error = Error + "The town may not be blank : ";
+            }
+
+            if (Lastname.Length > 50)
+            {
+                Error = Error + "The town must be less than 50 characters : ";
+            }
+            return Error;
         }
 
     }
