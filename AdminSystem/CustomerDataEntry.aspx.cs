@@ -16,18 +16,32 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void btnOK_Click(object sender, EventArgs e)
     {
         clsCustomer AnCustomer = new clsCustomer();
-        AnCustomer.Firstname = txtFirstname.Text;
-        AnCustomer.Lastname = txtLastname.Text;
-        AnCustomer.Email = txtEmail.Text;
-        AnCustomer.Postcode = txtPostcode.Text;
-        AnCustomer.DOB = Convert.ToDateTime(txtDOB.Text);
-        AnCustomer.Active = chkActive.Checked;
-        Session["AnCustomer"] = AnCustomer;
-        Response.Redirect("CustomerViewer.aspx");
+        string Firstname = txtFirstname.Text;
+        string Lastname = txtLastname.Text;
+        string Email = txtEmail.Text;
+        string DOB = txtDOB.Text;
+        string Postcode = txtPostcode.Text;
+        string Error = "";
+        Error = AnCustomer.Valid(Firstname, Lastname, Email, DOB, Postcode);
+        if (Error == "")
+        {
+            AnCustomer.Firstname = Firstname;
+            AnCustomer.Lastname = Lastname;
+            AnCustomer.Email = Email;
+            AnCustomer.DOB = Convert.ToDateTime(DOB);
+            AnCustomer.Postcode = Postcode;
+            AnCustomer.Active = chkActive.Checked;
+
+            clsCustomerCollection CustomerList = new clsCustomerCollection();
+            CustomerList.ThisCustomer = AnCustomer;
+            CustomerList.Add();
+            Response.Redirect("CustomerList.aspx");
+        }
+        else
+        {
+            lblError.Text = Error;
+        }
     }
-
-
-
 
     protected void btnFind_Click(object sender, EventArgs e)
     {

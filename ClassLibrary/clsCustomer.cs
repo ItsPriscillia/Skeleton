@@ -100,7 +100,7 @@ namespace ClassLibrary
             DB.Execute("sproc_tblCustomer_FilterByCustomerID");
             if (DB.Count == 1)
             {
-                mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+            mCustomerID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
             mFirstname = Convert.ToString(DB.DataTable.Rows[0]["Firstname"]);
             mLastname = Convert.ToString(DB.DataTable.Rows[0]["Lastname"]);
             mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
