@@ -8,8 +8,30 @@ using ClassLibrary;
 
 public partial class _1_DataEntry : System.Web.UI.Page
 {
+    Int32 CustomerID;
     protected void Page_Load(object sender, EventArgs e)
     {
+        CustomerID = Convert.ToInt32(Session["CustomerID"]);
+        if (IsPostBack== false)
+        {
+            if(CustomerID !=-1)
+            {
+                DisplayCustomer();
+            }
+        }
+
+    }
+
+    void DisplayCustomer()
+    {
+        clsCustomerCollection Customer = new clsCustomerCollection();
+        Customer.ThisCustomer.Find(CustomerID);
+        txtCustomerID.Text = Customer.ThisCustomer.CustomerID.ToString();
+        txtFirstname.Text = Customer.ThisCustomer.Firstname;
+        txtLastname.Text = Customer.ThisCustomer.Lastname;
+        txtEmail.Text = Customer.ThisCustomer.Email;
+        txtDOB.Text = Customer.ThisCustomer.DOB.ToString();
+        chkActive.Checked = Customer.ThisCustomer.Active;
 
     }
 
@@ -25,16 +47,26 @@ public partial class _1_DataEntry : System.Web.UI.Page
         Error = AnCustomer.Valid(Firstname, Lastname, Email, DOB, Postcode);
         if (Error == "")
         {
+            AnCustomer.CustomerID = CustomerID;
             AnCustomer.Firstname = Firstname;
             AnCustomer.Lastname = Lastname;
             AnCustomer.Email = Email;
             AnCustomer.DOB = Convert.ToDateTime(DOB);
             AnCustomer.Postcode = Postcode;
             AnCustomer.Active = chkActive.Checked;
-
             clsCustomerCollection CustomerList = new clsCustomerCollection();
-            CustomerList.ThisCustomer = AnCustomer;
-            CustomerList.Add();
+
+            if(CustomerID ==-1)
+            {
+                CustomerList.ThisCustomer = AnCustomer;
+                CustomerList.Add();
+            }
+            else
+            {
+                CustomerList.ThisCustomer.Find(CustomerID);
+                CustomerList.ThisCustomer = AnCustomer;
+                CustomerList.Update();
+            }
             Response.Redirect("CustomerList.aspx");
         }
         else
@@ -59,5 +91,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
             txtDOB.Text = AnCustomer.DOB.ToString();
             chkActive.Checked = AnCustomer.Active;
         }
+         
+       
     }
 }

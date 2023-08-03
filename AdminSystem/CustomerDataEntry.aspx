@@ -95,6 +95,7 @@
             top: 418px;
             left: 10px;
             z-index: 1;
+            right: 783px;
         }
         .auto-style16 {
             position: absolute;
