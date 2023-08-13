@@ -99,8 +99,8 @@
         }
         .auto-style16 {
             position: absolute;
-            top: 417px;
-            left: 82px;
+            top: 419px;
+            left: 103px;
             z-index: 1;
         }
         .auto-style17 {

@@ -32,7 +32,7 @@
         }
         .auto-style4 {
             position: absolute;
-            top: 626px;
+            top: 643px;
             left: 10px;
             z-index: 1;
         }
@@ -44,25 +44,26 @@
         }
         .auto-style7 {
             position: absolute;
-            top: 517px;
+            top: 519px;
             left: 183px;
             z-index: 1;
         }
         .auto-style11 {
             position: absolute;
-            top: 563px;
+            top: 570px;
             left: 99px;
             z-index: 1;
+            height: 35px;
         }
         .auto-style12 {
             position: absolute;
-            top: 563px;
+            top: 571px;
             left: 10px;
             z-index: 1;
         }
         .auto-style13 {
             position: absolute;
-            top: 515px;
+            top: 519px;
             left: 10px;
             z-index: 1;
         }
@@ -73,7 +74,7 @@
         <div>
         </div>
         <asp:Button ID="btnDelete" runat="server" CssClass="auto-style5" OnClick="btnDelete_Click" Text="Delete" />
-        <asp:Button ID="btnClear" runat="server" CssClass="auto-style11" OnClick="btnClear_Click" style="height: 35px" Text="Clear" />
+        <asp:Button ID="btnClear" runat="server" CssClass="auto-style11" OnClick="btnClear_Click" Text="Clear" />
         <asp:Button ID="btnAdd" runat="server" CssClass="auto-style2" OnClick="btnAdd_Click" Text="Add" />
         <p>
             &nbsp;</p>
